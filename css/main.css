@@ -1089,6 +1089,7 @@ header {
 	width: 100%;
 	min-height: 66px;
 	z-index: 600;
+	background: #000000;
 }
 header .row {
 	position: relative;
@@ -1229,7 +1230,7 @@ header .logo a {
 }
 
 /* dropdown nav */
-.main-navigation {
+.main-navigation { 
 	background: #000000;
 	padding: 24px 30px 42px;
 	margin: 0;
@@ -1514,8 +1515,8 @@ header .logo a {
 	float: left;
 }
 .intro-info .lead {
-	text-align: left;
-	padding-left: 13rem;
+	text-align: center;
+	padding-left: 1rem;
 }
 
 .about-content {
