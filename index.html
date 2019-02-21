@@ -371,7 +371,8 @@
 					      <h4>Galactic Fleet Admiral</h4>		      
 					      <p>This game is a turn-based strategy game that consists of allocating defensive and offensive ships to defend you and attack the enemy, respectively. This project was implemented in a rudimentary programminng language called Jack. This game ran on a simple virtual computer I built throughout my computer organization course. Although the language it was implemeted in was limited, it did support some object-oriented principles, making OO design of the player class possible.</p>
 
-					      <div class="categories">Individual</div>			               
+						  <div class="categories">Individual</div>
+						  <div class="categories">Development time: 2 days</div>			               
 					   </div>
 					   <div class="media">
 							<img src="images/portfolio/modals/m-GFA.PNG" alt="" />
@@ -391,7 +392,8 @@
 					      <h4>Cave Flyer</h4>		      
 					      <p>Cave Flyer is a game I created in Unity. It is a fairly simple game that focuses on crafting a "skilled-operator" feel for the player as they get better at the game. This is accomplished through a tight control system, and increasingly unforgiving level design. To counteract the difficulty of some of the later levels, I added checkpoint and lives systems, so that that player can die 3 times before being sent back to the beginning level. This ended up being necessary for many of the people I had playtest the game, as the final level incorporates enemies that track and follow the player. This was my first game of this scope in Unity, and I found it to be a solid learning experience for my later games.</p>
 
-					      <div class="categories">Individual</div>			               
+						  <div class="categories">Individual</div>
+						  <div class="categories">Development time: 1 week</div>			               
 					   </div>
 					   <div class="media">
 							<img src="images/portfolio/modals/m-cave_flyer.PNG" alt="" />
@@ -411,7 +413,8 @@
 					      <h4>Arbor Under Siege</h4>		      
 					      <p>When I decided to create a rails shooter game, I had to pay homage to the Star Wars Trilogy Arcade (1998) game that I played many times growing up. I used this as an opportunity to learn more about importing and maintaining assets in Unity. The ships models were free on turbosquid.com (however I borrowed the music from my pal, Mr. Williams). I also used this project to learn how to use the terrain tools and texturing in Unity. The movement of the player rig and enemy tie fighters are controlled through the timeline system. The player's movement is defined relative to the camera, with proper clamping. I found this fun to implement, as I was going through hierarchical transformations in my Computer Graphics class around this time. </p>
 						  <p> I've found my greatest challenge in this game is the quantity of keyframe animations required to populate the world space, and make the player feel like they're in a hectic battle zone. I still have quite a bit more animation to go, and tidying of the UI before I am ready to call this game finished. I also plan to give the enemies blasters of their own, and a shield mechanic for the player to match it.
-					      <div class="categories">Individual</div>			               
+						  <div class="categories">Individual</div>
+						  <div class="categories">Development time: 2 weeks (ongoing)</div>			               
 					   </div>
 					   
 					   <div class="media">
@@ -428,10 +431,11 @@
 
 						<iframe width="853" height="480" src="https://www.youtube.com/embed/3FBY73iLaoQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					   <div class="description-box">
-					      <h4>Beetle</h4>		      
-					      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-
-					      <div class="categories">Branding</div>			               
+					      <h4>Minotaurus (Prototype)</h4>		      
+					      <p>Minotaurus is an ongoing turn-based game I'm developing based on the LEGO board game of the same name. I'm currently implementing this game to be a player vs. single AI opponent, however it will be expandable to multiple player/AI entities in the future. The goal is to get to the center goal of the maze before the opponent does, however the distance you can move is determined by the roll of a die. There are two twists to this game. The first of which is that the player and opponent can roll the "Minotaur" on the die, and control a neutral character for that turn that can send the opponent back to their start. The other mechanic that can be rolled on a die is the ability to activate or deactivate a gate on the map. This allows the players to engage in interesting scenarios, such as trying to block the opponent from getting to the goal, or blocking one's own path to stay safe from the Minotaur.  </p>
+						  <p>The current map and assets are placeholders while I develop the mechanics of the game. The blue sphere represents the player, red ball represents the AI, and the green cube is the finish goal. So far, I have utilized the Nav Mesh system and some other heuristic methods to define the AI behavior. When a gate is activated along the AI's path, it will reroute to the next shortest path using a Nav Mesh Agent component. This is implemented using a variant of the A* pathfinding algorithm. Unfortunantely, the Nav Mesh system does not make it easy to access what objects are along a current path (I was getting inconsistent results), so I created a seperate method to calculate which gates to activiate/deactivate. This method uses two determining features: a raycast to the finish goal, and a distance calculation of a gate with respect to the player and finish goal. The changing states of a gate are accounted for real-time in the Nav Mesh using the carving feature, which avoids the computationally expensive task of rebaking the entire mesh. This creates a mostly rational decision making process for the AI, similar to how humans make the same calculation (save for the raycast). I may write my own Nav Mesh traversing algorithm to make the AI's decisions even more accurate in the future, however the smartest AI does not necessarily make for the most fun AI to play against.</p>
+						  <div class="categories">Individual</div>	
+						  <div class="categories">Development time: 1 week(ongoing)</div>			               
 					   </div>
 					   
 					   <div class="media">
@@ -448,10 +452,11 @@
   	
 						 <iframe width="853" height="480" src="https://www.youtube.com/embed/N67ndMvbU3k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					   <div class="description-box">
-					      <h4>Lighthouse</h4>		      
-					      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+					      <h4>Pancake Flipper</h4>		      
+					      <p>This is a group game project from my programming studio course. It was developed using the Agile methodology, with daily scrum meetings. The concept is that the player competes against an AI to "flip" randomly ordered pancakes until they are in order. This project was interesting because it was implemented in C++2a, and several iterations of graphics packages were used. This meant that the game engine code we wrote had to be modular enough to interact properly with ncurses (C++), FLTK (C++), and Tkinter (Python). The AI uses a min-heap tree to store and traverse the possible moves it can make at the start of the game. While an algorithm such as A* would have been more efficient, we were required to use a variant of the minimax tree data structure. A difficulty system was implemented that determined how far many "flips" ahead the AI could compute. The AI's logic worked without fail, making a tie the best outcome for the player at the highest difficulty.  </p>
 
-					      <div class="categories">Web Development</div>			               
+					      <div class="categories">Group</div>	
+						  <div class="categories">Development time: 3 weeks</div>		               
 					   </div>
 					   <div class="media">
 							<img src="images/portfolio/modals/m-Pancake.PNG" alt="" />
@@ -465,15 +470,19 @@
 
 				   <div id="modal-06" class="popup-modal slider mfp-hide">	
     	
-
+						<div class="media">
+								<img src="images/portfolio/modals/bunny7.png" alt="" />
+							</div>  
 					   <div class="description-box">
-					      <h4>Salad</h4>		      
-					      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+					      <h4>Software Rasterizer</h4>		      
+					      <p>This was an interesting assignment from my ongoing computer graphics class. It is a C++ program that rasterizes OBJ files according to certain parameters. After reading in the vertex data from an OBJ file, the triangles are created and converted to image space to be drawn. Z-buffering is implemented to represent depth in the image. Depending on the command line arguments, the program will either color the pixels according to Z-buffer depth, use random per-vertex coloring, or apply a gradient across the varying Y-position of the image. It then generates a PNG based on that color information. The image scales to whatever pixel width and height are passed as arguments. </p>
 
-					      <div class="categories">Branding</div>			               
+					      <div class="categories">Individual</div>	
+						  <div class="categories">Development time: 1 week</div>				               
 					   </div>
 					   <div class="media">
-							<img src="images/portfolio/modals/m-Rasterizer.PNG" alt="" />
+							<img src="images/portfolio/modals/m-Rasterizer2.PNG" alt="" />
+							<img src="images/portfolio/modals/m-Rasterizer3.PNG" alt="" />
 						</div>  
 			         <div class="link-box">
 			            <!--<a href="http://www.behance.net">Details</a>-->
