@@ -90,11 +90,8 @@
    	</div> <!-- /intro-content --> 
 
    	<ul class="intro-social">        
-         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-         <li><a href="#"><i class="fa fa-behance"></i></a></li>
-         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-         <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+         <li><a href="http://www.linkedin.com/in/james-mclain-johnson-63707a154 " target="_blank"><i class="fa fa-linkedin"></i></a></li>
+         <li><a href="http://github.com/mclainj" target="_blank"><i class="fa fa-github"></i></a></li>
       </ul> <!-- /intro-social -->      	
 
    </section> <!-- /intro -->
@@ -228,7 +225,6 @@
    		<div class="col-twelve">
    			<a href="#contact" title="Contact Me" class="button stroke smoothscroll">Contact Me</a>
 			   <a href="JMJohnsonResume.pdf" target="_blank" title="Download Resume" class="button button-primary">Download Resume</a>
-			   <!--<a href="styles.html" title="">Style Demo</a>-->
    		</div>   		
    	</div>
 
@@ -285,7 +281,7 @@
 
 	        		<div class="bgrid folio-item">
 	               <div class="item-wrap">
-	               	<img src="images/portfolio/cave_flyer.PNG" alt="CAve Flyer">
+	               	<img src="images/portfolio/cave_flyer.PNG" alt="Cave Flyer">
 	               	<a href="#modal-02" class="overlay">              		                  
 	                     <div class="folio-item-table">
 	                     	<div class="folio-item-cell">
@@ -317,13 +313,13 @@
 
 	            <div class="bgrid folio-item">
 	               <div class="item-wrap">
-	               	<img src="images/portfolio/Minotaurus.PNG" alt="Beetle">
+	               	<img src="images/portfolio/Minotaurus1.PNG" alt="Beetle">
 	                  <a href="#modal-04" class="overlay">                  	                 
 	                     <div class="folio-item-table">
 	                     	<div class="folio-item-cell">
 	                     		<h3 class="folio-title">Minotaurus (Prototype)</h3>	     					    
 		     					    	<span class="folio-types">
-		     					       	  Maze Race vs AI
+		     					       	  Maze Race Against AI
 		     					      </span>		     		
 		     					   </div>  	                      	
 	                     </div>                    
@@ -370,7 +366,7 @@
 						<iframe width="853" height="480" src="https://www.youtube.com/embed/k_eWJL26q1I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					   <div class="description-box">
 					      <h4>Galactic Fleet Admiral</h4>		      
-					      <p>This game is a turn-based strategy game that consists of allocating defensive and offensive ships to defend you and attack the enemy, respectively. This project was implemented in a rudimentary programminng language called Jack. This game ran on a simple virtual computer I built throughout my computer organization course. Although the language it was implemeted in was limited, it did support some object-oriented principles, making OO design of the player class possible.</p>
+					      <p>This game is a turn-based strategy game that consists of allocating defensive and offensive ships to defend your planets and attack the enemy's planets, respectively. This project was implemented in a rudimentary programminng language called Jack. The game ran on a simple virtual computer I built throughout my computer organization course. Although the language it was implemeted in was limited, it did support some object-oriented principles, making OO design of the player/Opponent classes possible. The AI opponent's logic was based on a decision tree, with a set of psuedo-random choices between multiple logical options to make the AI seem more competent. </p>
 
 						  <div class="categories">Individual</div>
 						  <div class="categories">Development time: 2 days</div>			               
@@ -391,10 +387,15 @@
 
 					   <div class="description-box">
 					      <h4>Cave Flyer</h4>		      
-					      <p>Cave Flyer is a game I created in Unity. It is a fairly simple game that focuses on crafting a "skilled-operator" feel for the player as they get better at the game. This is accomplished through a tight control system, and increasingly unforgiving level design. To counteract the difficulty of some of the later levels, I added checkpoint and lives systems, so that that player can die 3 times before being sent back to the beginning level. This ended up being necessary for many of the people I had playtest the game, as the final level incorporates enemies that track and follow the player. This was my first game of this scope in Unity, and I found it to be a solid learning experience for my later games.</p>
+					      <p>Cave Flyer is the first game I developed in Unity. It is a fairly simple game that focuses on crafting a "skilled-operator" feel for the player as they progress through the game. This is accomplished through a tight control system, and increasingly unforgiving level design. To counteract the difficulty of some of the later levels, I added checkpoint and lives systems, so that that player can die 3 times before being sent back to the beginning level. This ended up being necessary for many of the people I had playtest the game, as the final level incorporates enemies that track and follow the player. While this game didn't contain advanced Unity topics, I learned much from this experience. It acted as a solid introduction to the Unity workflow. </p>
 
 						  <div class="categories">Individual</div>
-						  <div class="categories">Development time: 1 week</div>			               
+						  <div class="categories">Development time: 1 week</div>
+						  <div class="row section-intro">
+						  <div class="col-twelve">	
+						  <a href="builds/Cave_Flyer.zip" title="Download" class="button button-primary">Download</a>	
+						  </div>	  
+						</div>             
 					   </div>
 					   <div class="media">
 							<img src="images/portfolio/modals/m-cave_flyer.PNG" alt="" />
@@ -412,8 +413,9 @@
 						 <iframe width="853" height="480" src="https://www.youtube.com/embed/aNiNXD9dYzY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					   <div class="description-box">
 					      <h4>Arbor Under Siege</h4>		      
-					      <p>When I decided to create a rails shooter game, I had to pay homage to the Star Wars Trilogy Arcade (1998) game that I played many times growing up. I used this as an opportunity to learn more about importing and maintaining assets in Unity. The ship models were free on turbosquid.com (however I borrowed the music from my pal, Mr. Williams). I also used this project to learn how to use the terrain tools and texturing in Unity. The movement of the player rig and enemy tie fighters are controlled through the timeline system. The player's movement is defined relative to the camera, with proper clamping. I found this fun to implement, as I was going through hierarchical transformations in my Computer Graphics class around this time. </p>
-						  <p> I've found my greatest challenge in this game is the quantity of keyframe animations required to populate the world space, and make the player feel like they're in a hectic battle zone. I still have quite a bit more animation to go, and tidying of the UI before I am ready to call this game finished. I also plan to give the enemies blasters of their own, and a shield mechanic for the player to match it.
+						  <p>When I decided to create a rails shooter game, I had to pay homage to the Star Wars Trilogy Arcade (1998) game that I played many times growing up. I used this as an opportunity to learn more about importing and maintaining assets in Unity. The ship models were free on turbosquid.com (however I borrowed the music from my pal, Mr. Williams). I also used this project to learn how to use the terrain tools and texturing in Unity. The movement of the player rig and enemy tie fighters are controlled through the timeline system.</p>
+						  <p>I think the most satisfying aspect of the game is the flight controls, and establishing what kind of transformations the ship should experience with different input and position on the screen. The player's movement is defined relative to the camera, with adjustable clamping. I found this fun to implement, as I was going through hierarchical transformations in my Computer Graphics class around this time. </p>
+						  <p> I've found my greatest challenge in this game is the quantity of keyframe animations required to populate the world space, and make the player feel like they're in a hectic battle zone. I still have quite a bit more animation to go, and tidying of the UI before I am ready to call this game finished. I also plan to give the enemies blasters of their own, and a shield mechanic for the player to match it.</p>
 						  <div class="categories">Individual</div>
 						  <div class="categories">Development time: 2 weeks (ongoing)</div>			               
 					   </div>
@@ -430,17 +432,18 @@
 
 				   <div id="modal-04" class="popup-modal slider mfp-hide">	 	
 
-						<iframe width="853" height="480" src="https://www.youtube.com/embed/3FBY73iLaoQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<iframe width="853" height="480" src="https://www.youtube.com/embed/yQRzfUvKJR0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					   <div class="description-box">
 					      <h4>Minotaurus (Prototype)</h4>		      
 					      <p>Minotaurus is an ongoing turn-based game I'm developing based on the LEGO board game of the same name. I'm currently implementing this game to be a player vs. single AI opponent, however it will be expandable to multiple player/AI entities in the future. The goal is to get to the center goal of the maze before the opponent does, however the distance you can move is determined by the roll of a die. There are two twists to this game. The first of which is that the player and opponent can roll the "Minotaur" on the die, and control a neutral character for that turn that can send the opponent back to their start. The other mechanic that can be rolled on a die is the ability to activate or deactivate a gate on the map. This allows the players to engage in interesting scenarios, such as trying to block the opponent from getting to the goal, or blocking one's own path to stay safe from the Minotaur.  </p>
-						  <p>The current map and assets are placeholders while I develop the mechanics of the game. The blue sphere represents the player, red ball represents the AI, and the green cube is the finish goal. So far, I have utilized the Nav Mesh system and some other heuristic methods to define the AI behavior. When a gate is activated along the AI's path, it will reroute to the next shortest path using a Nav Mesh Agent component. This is implemented using a variant of the A* pathfinding algorithm. Unfortunantely, the Nav Mesh system does not make it easy to access what objects are along a current path (I was getting inconsistent results), so I created a seperate method to calculate which gates to activiate/deactivate. This method uses two determining features: a raycast to the finish goal, and a distance calculation of a gate with respect to the player and finish goal. The changing states of a gate are accounted for real-time in the Nav Mesh using the carving feature, which avoids the computationally expensive task of rebaking the entire mesh. This creates a mostly rational decision making process for the AI, similar to how humans make the same calculation (save for the raycast). I may write my own Nav Mesh traversing algorithm to make the AI's decisions even more accurate in the future, however the smartest AI does not necessarily make for the most fun AI to play against.</p>
+						  <p>The current map and assets are placeholders while I develop the mechanics of the game. The blue sphere represents the player, red sphere represents the AI, and the green cube is the finish goal. So far, I have utilized the Nav Mesh system and some other heuristic methods to define the AI behavior. When a gate is activated along the AI's path, it will reroute to the next shortest path using a Nav Mesh Agent component. This is implemented using a variant of the A* pathfinding algorithm. Unfortunantely, the Nav Mesh system does not make it easy to access what objects are along a current path (I was getting inconsistent results), so I created a seperate method to calculate which gates to activiate/deactivate. This method uses two determining features: a raycast to the finish goal, and a distance calculation of a gate with respect to the player and finish goal. The changing states of a gate are accounted for real-time in the Nav Mesh using the carving feature, which avoids the computationally expensive task of rebaking the entire mesh. This creates a mostly rational decision making process for the AI, similar to how humans might make the same calculation (save for the raycast). I may write my own Nav Mesh traversing algorithm to make the AI's decisions even more accurate in the future, however the smartest AI does not necessarily make for the most fun AI to play against.</p>
+						  <p>The next aspect of Minotaurus I'll be working on is the "Minotaur" itself. It will be a neutral character on the map that only moves when either the player or AI rolls "Minotaur" on the die. It should be relatively simple to implement, as when the player rolls it, it will simply use the same player controller methods to move. When the AI rolls the minotaur, it will find the shortest path to the player using the same algoritm as the AI uses to get to the finish goal. When the Minotaur game object makes contact with the player or AI, it will reset the Minotaur and colliding entity to their starting positions. Following the implementation of the Minotaur, I plan to polish the game, and consider alterations to the mechanics that would allow for the player to traverse the corridors in first person. Paired with a minimap, I believe this could foster some great gameplay moments.</p>
 						  <div class="categories">Individual</div>	
 						  <div class="categories">Development time: 1 week(ongoing)</div>			               
 					   </div>
 					   
 					   <div class="media">
-							<img src="images/portfolio/modals/m-Minotaurus.PNG" alt="" />
+							<img src="images/portfolio/modals/m-Minotaurus1.PNG" alt="" />
 						</div>     
 			         <div class="link-box">
 			            <!--<a href="http://www.behance.net">Details</a>-->
@@ -454,12 +457,16 @@
 						 <iframe width="853" height="480" src="https://www.youtube.com/embed/N67ndMvbU3k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					   <div class="description-box">
 					      <h4>Pancake Flipper</h4>		      
-					      <p>This is a group game project from my programming studio course. It was developed using the Agile methodology, with daily scrum meetings. The concept is that the player competes against an AI to "flip" randomly ordered pancakes until they are in order. This project was interesting because it was implemented in C++2a, and several iterations of graphics packages were used. This meant that the game engine code we wrote had to be modular enough to interact properly with ncurses (C++), FLTK (C++), and Tkinter (Python). The AI uses a min-heap tree to store and traverse the possible moves it can make at the start of the game. While an algorithm such as A* would have been more efficient, we were required to use a variant of the minimax tree data structure. A difficulty system was implemented that determined how far many "flips" ahead the AI could compute. The AI's logic worked without fail, making a tie the best outcome for the player at the highest difficulty.  </p>
+						  <p>This is a group game project from my programming studio course. It was developed using the Agile methodology, with daily scrum meetings. The concept is that the player competes against an AI to "flip" randomly ordered pancakes until they are in order. This project was interesting because it was implemented in C++2a, and several iterations of graphics packages were used. This meant that the game engine code we wrote had to be modular enough to interact properly with ncurses (C++), FLTK (C++), and Tkinter (Python). The AI used a min-heap tree to store and traverse the possible moves it can make at the start of the game. While an algorithm such as A* would have been more efficient, we were required to use a variant of the minimax tree data structure. A difficulty system was implemented that determined how far many "flips" ahead the AI could compute. The AI's logic worked as intended, making a tie the best outcome for the player at the highest difficulty.</p>
+						  <p>What I found most valuable about this project was learning how to follow a development paradigm with a team. We also spent a considerable amount of time documenting our design, and created a nearly exhaustive interaction diagram before coding, which made the implementation quite smooth considering the scale.</p>
+						  
 
 					      <div class="categories">Group</div>	
 						  <div class="categories">Development time: 3 weeks</div>		               
 					   </div>
 					   <div class="media">
+							<img src="images/portfolio/modals/m-UML.PNG" alt="" />
+							<img src="images/portfolio/modals/m-InteractionDiagram.PNG" alt="" />
 							<img src="images/portfolio/modals/m-Pancake.PNG" alt="" />
 						</div>    
 			         <div class="link-box">
@@ -518,64 +525,14 @@
 
    			<p class="lead">Thanks for visiting my page! I welcome any feedback or questions you might have for me. Have a great day!</p>
 
+			   <div class="icon">
+					<i class="icon-mail"></i>
+				</div>
+		
+				<h5>Email Me At</h5>
+				<p>mclainj@tamu.edu</p>
    		</div> 
    	</div> <!-- /section-intro -->
-
-   	<div class="row contact-form">
-
-   		<div class="col-twelve">
-
-            <!-- form -->
-            <form name="contactForm" id="contactForm" method="post" action="">
-      			<fieldset>
-
-                  <div class="form-field">
- 						   <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="">
-                  </div>
-                  <div class="form-field">
-	      			   <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="">
-	               </div>
-                  <div class="form-field">
-	     				   <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="">
-	               </div>                       
-                  <div class="form-field">
-	                 	<textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required=""></textarea>
-	               </div>                      
-                 <div class="form-field">
-                     <button class="submitform">Submit</button>
-                     <div id="submit-loader">
-                        <div class="text-loader">Sending...</div>                             
-       				      <div class="s-loader">
-								  	<div class="bounce1"></div>
-								  	<div class="bounce2"></div>
-								  	<div class="bounce3"></div>
-								</div>
-							</div>
-                  </div>
-
-      			</fieldset>
-      		</form> <!-- Form End -->
-
-            <!-- contact-warning -->
-            <div id="message-warning">            	
-            </div>            
-            <!-- contact-success -->
-      		<div id="message-success">
-               <i class="fa fa-check"></i>Your message was sent, thank you!<br>
-      		</div>
-
-         </div> <!-- /col-twelve -->
-   		
-   	</div> <!-- /contact-form -->
-
-   	<div class="row contact-info">
-
-   			<div class="icon">
-   				<i class="icon-mail"></i>
-   			</div>
-
-   			<h5>Email Me At</h5>
-   			<p>mclainj@tamu.edu</p>
 
 
 
@@ -593,11 +550,8 @@
      		<div class="col-six tab-full pull-right social">
 
      			<ul class="footer-social">        
-			      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-			      <li><a href="#"><i class="fa fa-behance"></i></a></li>
-			      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-			      <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-			      <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+						<li><a href="http://www.linkedin.com/in/james-mclain-johnson-63707a154 " target="_blank"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="http://github.com/mclainj" target="_blank"><i class="fa fa-github"></i></a></li>
 			   </ul> 
 	      		
 	      </div>
