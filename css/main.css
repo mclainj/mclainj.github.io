@@ -1602,14 +1602,16 @@ header .logo a {
 		margin-right: 0;
 	}
 }
-@media only screen and (max-width:600px) {
+@media only screen and (max-width:6000px) {
 	.intro-info {
 		text-align: center;
 		margin-top: 3rem;
 	}
 	.intro-info img {
-		height: 6.6rem;
-		width: 6.6rem;
+		/*height: 6.6rem;
+		width: 6.6rem;*/
+		height: 28rem;
+		width: 28rem;
 		float: none;
 		display: inline-block;
 	}
