@@ -248,7 +248,7 @@
    			<h1>What I've been up to:</h1>
 
    			<p class="lead">I'll be posting many of the interesting projects I've completed here, as well as some of my ongoing work. There will be a mix of team projects and individual pursuits. Please check back soon for new entries!</p>
-			<p class="lead">Coming Soon: 3D networked FPS bow shooter, 3D platformer puzzle game for capstone, and Unity shaders.</p>
+			<p class="lead">Coming Soon: 3D platformer puzzle game for capstone, and Unity shaders.</p>
 			<p class="lead">Click on the images below to find out more about that project.</p>
    		</div>   		
    	</div> <!-- /section-intro--> 
@@ -269,6 +269,22 @@
 
    			<!-- portfolio-wrapper -->
 	         <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
+
+					<div class="bgrid folio-item">
+							<div class="item-wrap">
+								<img src="images/portfolio/BowShooter.PNG" alt="Networked 3D Bow Shooter">
+							   <a href="#modal-00" class="overlay">	                  	           
+								  <div class="folio-item-table">
+									  <div class="folio-item-cell">
+												 <h3 class="folio-title">Networked 3D Bow Shooter</h3>	     					    
+												   <span class="folio-types">
+													   Photon Networked FPS (Prototype)
+												 </span>
+											 </div>	                      	
+								  </div>                    
+							   </a>
+							</div>	               
+					</div> <!-- /folio-item -->
 
 	         	<div class="bgrid folio-item">
 	               <div class="item-wrap">
@@ -383,7 +399,35 @@
 	        		</div> <!-- /folio-item -->   
 
 	            <!-- modal popups - begin
-	            ============================================================= -->
+				============================================================= -->
+				<div id="modal-00" class="popup-modal slider mfp-hide">	
+    	
+						<iframe width="853" height="480" src="https://www.youtube.com/embed/gbEhgLDO0ps?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					   <div class="description-box">
+					      <h4>Networked FPS Bow Shooter - Prototype</h4>		      
+					      <p>This game is a prototype for a multiplayer bow combat game some friends and I want to make. I created this technical prototype to learn more about networking games, as well as creating more complex character controllers. This game consists of a starting menu screen, a waiting area that all players are loaded into after pressing “Start”, and the game map scene. Once players are in the game map scene, they can fight using their bows. In the video above, once a player has been hit three times by the other player, that player respawns and the other player gets a point.</p>
+						<p>Networking:</p>
+						<p>I utilized the Photon Unity Networking 2 API (PUN 2) to connect players. This system is great because it allows up to 20 clients connections for free. In my game, I currently allow up to 4 players due to the size of the test environment I set up. Upon launching the game, the game will connect to Photon services before allowing the player to press “Start”. When the player proceeds, they are loaded into a room. I made it so that there must be at least 2 players in this Waiting Room before the countdown for the match begins. If the number of players falls below the minimum number needed, I cancel the countdown and wait for more players to join. When the countdown finishes, I load everyone into the next scene. After waiting for players to connect, I grab references for them in my player manager class, which is used to tell which player fired the arrow that eliminated someone to update the score.</p>
+						<p>To network player movement, I use the Photon Transform View component. This allows me to easily specify when I want to update the player’s position and rotation over the network. Similarly, the Photon Animator View component allows me to keep track of which state the animator component is in for the player. </p>  
+						<p>Networking arrow movement also utilized Photon’s Transform View component. I learned a lot about how Unity checks for collisions, as I initially had trouble with my arrows going through much of objects before OnCollisionEnter detected them, allowing me to “embed” them onto that object. I solved this issue by implementing my own line-point collision detection, as well as slightly increasing the frequency Unity run’s physics calculations.</p>
+						<p>Character Controller:</p>
+						<p>I was very satisfied with the FPS controller I ended up with. This was my first experience making a character controller of this complexity, so I learned a great deal about Unity’s input system. I also made use of Unity’s animation curve system to tune the jump behavior. Now the movement feels tight with light jumps that don’t feel floaty. </p>
+						<p>Something else I implemented gravity spheres that pull arrows that get within its range (the purple spheres in the video). I think this will allow for some fun combat mechanics in the future. </p>
+						<p>There is much I still want to implement into this game, however my focus is currently on another team game project that I plan to post on here soon.</p>
+						<p>The bow asset was created for the game by Kin Kwan. The other assets in the video are free placeholder art from the Unity asset store.</p>
+						<div class="categories">Individual</div>
+						  <div class="categories">Development time: 4 weeks</div>			               
+					   </div>
+					   <div class="media">
+							<img src="images/portfolio/modals/m-BowShooter.PNG" alt="" />
+						</div>  
+
+			         <div class="link-box">
+			            <!--<a href="http://www.behance.net">Details</a>-->
+					      <a href="#" class="popup-modal-dismiss">Close</a>
+			         </div>		      
+
+				   </div> <!-- /modal-01 -->
 	            <div id="modal-01" class="popup-modal slider mfp-hide">	
     	
 						<iframe width="853" height="480" src="https://www.youtube.com/embed/k_eWJL26q1I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -531,7 +575,57 @@
 					   <div class="description-box">
 					      <h4>GLSL Shaders</h4>		      
 					      <p>The following are the result of a few shader programs I wrote in GLSL, as part of a C++ OpenGL program. In order going down, the shading models used to create the three bunnies are Blinn-Phong, silhouette, and cel shading. The Blinn-Phong shader emulates the physics behind real world illumination quite closely. The silhouette shader simply checks if each vertex normal is orthogonal to the camera and colors that fragment black if it is. If not, it is colored white. It produces a fascinating "hand-drawn" looking effect. The shader on the final bunny (and the teapot at the top, and image at the bottom) is implemented using cel shading. This is a shading program that is somewhat of a combination of the previous two shaders, except it discretizes the colored fragments across 4-5 colors.</p>
-
+						  <p>
+						  <pre class="prettyprint">
+								using System;
+								using System.Collections;
+								using System.Collections.Generic;
+								using System.Linq;
+								using UnityEngine;
+								
+								public class StateMachine : MonoBehaviour
+								{
+									private Dictionary<Type, BaseState> availableStates;
+									public BaseState currState { get; private set; }
+									public event Action<BaseState> OnStateChanged; // Event for other scripts to listen to
+								
+									public Type instanceType; // Used for reference in other scripts
+								
+									public GameObject actor;
+								
+									// Assign only necessary states to this entity
+									public void AssignStates(Dictionary<Type, BaseState> states) => availableStates = states;
+								
+									public void AssignInstance(Type type) => instanceType = type;
+								
+									private void Update() 
+									{
+										if (currState?.GetType() == null) // Start with first state in dictionary
+										{
+											currState = availableStates.Values.First();
+											currState.OnEnterState();
+										}
+										
+										var nextState = currState?.Tick(); // Tick() provided Update() functionality for states
+																		   // When nextState is null, don't change states
+										if (nextState?.GetType() != null && nextState != currState.GetType())
+											SwitchState(nextState);
+									}
+								
+									private void SwitchState(Type nextState)
+									{
+										// Debug.Log("Switching state to " + nextState);
+										AssignInstance(nextState);
+										currState.OnExitState();
+										currState = availableStates[nextState];
+										OnStateChanged?.Invoke(currState); 
+								
+										currState.OnEnterState();
+									}
+								}
+								
+							</pre>
+							</p>
 					      <div class="categories">Individual</div>	
 						  <div class="categories">Development time: 2 days</div>				               
 					   </div>
@@ -628,6 +722,7 @@
    <script src="js/jquery-2.1.3.min.js"></script>
    <script src="js/plugins.js"></script>
    <script src="js/main.js"></script>
+   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script> 
 
 </body>
 
