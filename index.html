@@ -270,15 +270,31 @@
    			<!-- portfolio-wrapper -->
 	         <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
 
+				<div class="bgrid folio-item">
+					<div class="item-wrap">
+						<img src="images/portfolio/BowShooter.PNG" alt="Networked 3D Bow Shooter">
+					   <a href="#modal-1" class="overlay">	                  	           
+						  <div class="folio-item-table">
+							  <div class="folio-item-cell">
+										 <h3 class="folio-title">Networked 3D Bow Shooter</h3>	     					    
+										   <span class="folio-types">
+											   Photon Networked FPS (Prototype)
+										 </span>
+									 </div>	                      	
+						  </div>                    
+					   </a>
+					</div>	               
+				</div> <!-- /folio-item -->
+
 					<div class="bgrid folio-item">
 							<div class="item-wrap">
-								<img src="images/portfolio/BowShooter.PNG" alt="Networked 3D Bow Shooter">
+								<img src="images/portfolio/SeaShader.PNG" alt="Sea Shader">
 							   <a href="#modal-00" class="overlay">	                  	           
 								  <div class="folio-item-table">
 									  <div class="folio-item-cell">
-												 <h3 class="folio-title">Networked 3D Bow Shooter</h3>	     					    
+												 <h3 class="folio-title">Sea Shader</h3>	     					    
 												   <span class="folio-types">
-													   Photon Networked FPS (Prototype)
+													HLSL Vert Frag Shader in Unity
 												 </span>
 											 </div>	                      	
 								  </div>                    
@@ -400,26 +416,57 @@
 
 	            <!-- modal popups - begin
 				============================================================= -->
+				<div id="modal-1" class="popup-modal slider mfp-hide">	
+    	
+					<iframe width="853" height="480" src="https://www.youtube.com/embed/gbEhgLDO0ps?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				   <div class="description-box">
+					  <h4>Networked FPS Bow Shooter - Prototype</h4>		      
+					  <p>This game is a prototype for a multiplayer bow combat game some friends and I are making. I created this technical prototype to learn more about networking games, as well as creating more complex character controllers. This game consists of a starting menu screen, a waiting area that all players are loaded into after pressing “Start”, and the game map scene. Once players are in the game map scene, they can fight using their bows. In the video above, once a player has been hit three times by the other player, that player respawns and the other player gets a point.</p>
+					<p>Networking:</p>
+					<p>I utilized the Photon Unity Networking 2 API (PUN 2) to connect players. This system is great because it allows up to 20 client connections for free. In my game, I currently allow up to 4 players due to the size of the test environment I set up. Upon launching the game, it will connect to Photon services before allowing the player to press “Start”. When the player proceeds, they are loaded into a room. I made it so that there must be at least 2 players in this Waiting Room before the countdown for the match begins. If the number of players falls below the minimum number needed, I cancel the countdown and wait for more players to join. When the countdown finishes, I load everyone into the next scene. After waiting for players to connect, I grab references for them in my player manager class, which is used to tell which player fired the arrow that eliminated someone to update the score.</p>
+					<p>To network player movement, I use the Photon Transform View component. This allows me to easily specify when I want to update the player’s position and rotation over the network. Similarly, the Photon Animator View component allows me to keep track of which state the animator component is in for the player. </p>  
+					<p>Networking arrow movement also utilized Photon’s Transform View component. I learned a lot about how Unity checks for collisions, as I initially had trouble with my arrows going through much of objects before OnCollisionEnter detected them, allowing me to “embed” them onto that object. I solved this issue by implementing my own line-object collision detection, as well as slightly increasing the frequency Unity runs physics calculations.</p>
+					<p>Character Controller:</p>
+					<p>I was very satisfied with the FPS controller I ended up with. This was my first experience making a character controller of this complexity, so I learned a great deal about Unity’s input system. I also made use of Unity’s animation curve system to tune the jump behavior. Now the movement feels tight with light jumps that don’t feel floaty. </p>
+					<p>I also implemented gravity spheres that pull arrows that get within its range (the purple spheres in the video). I think this will allow for some fun combat mechanics in the future. </p>
+					<p>There is much I still want to implement in this game, however my focus is currently on another team game project that I plan to post on here soon.</p>
+					<p>The bow asset was created for the game by Kin Kwan. The other assets in the video are free placeholder art from the Unity asset store.</p>
+					<div class="categories">Individual</div>
+					  <div class="categories">Development time: 4 weeks</div>			               
+				   </div>
+				   <div class="media">
+						<img src="images/portfolio/modals/m-BowShooter.PNG" alt="" />
+					</div>  
+
+				 <div class="link-box">
+					<!--<a href="http://www.behance.net">Details</a>-->
+					  <a href="#" class="popup-modal-dismiss">Close</a>
+				 </div>		      
+
+			   </div> <!-- /modal-1 -->
+
 				<div id="modal-00" class="popup-modal slider mfp-hide">	
     	
-						<iframe width="853" height="480" src="https://www.youtube.com/embed/gbEhgLDO0ps?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe width="853" height="480" src="https://www.youtube.com/embed/F8KeRT0SLvk?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					   <div class="description-box">
-					      <h4>Networked FPS Bow Shooter - Prototype</h4>		      
-					      <p>This game is a prototype for a multiplayer bow combat game some friends and I are making. I created this technical prototype to learn more about networking games, as well as creating more complex character controllers. This game consists of a starting menu screen, a waiting area that all players are loaded into after pressing “Start”, and the game map scene. Once players are in the game map scene, they can fight using their bows. In the video above, once a player has been hit three times by the other player, that player respawns and the other player gets a point.</p>
-						<p>Networking:</p>
-						<p>I utilized the Photon Unity Networking 2 API (PUN 2) to connect players. This system is great because it allows up to 20 client connections for free. In my game, I currently allow up to 4 players due to the size of the test environment I set up. Upon launching the game, it will connect to Photon services before allowing the player to press “Start”. When the player proceeds, they are loaded into a room. I made it so that there must be at least 2 players in this Waiting Room before the countdown for the match begins. If the number of players falls below the minimum number needed, I cancel the countdown and wait for more players to join. When the countdown finishes, I load everyone into the next scene. After waiting for players to connect, I grab references for them in my player manager class, which is used to tell which player fired the arrow that eliminated someone to update the score.</p>
-						<p>To network player movement, I use the Photon Transform View component. This allows me to easily specify when I want to update the player’s position and rotation over the network. Similarly, the Photon Animator View component allows me to keep track of which state the animator component is in for the player. </p>  
-						<p>Networking arrow movement also utilized Photon’s Transform View component. I learned a lot about how Unity checks for collisions, as I initially had trouble with my arrows going through much of objects before OnCollisionEnter detected them, allowing me to “embed” them onto that object. I solved this issue by implementing my own line-object collision detection, as well as slightly increasing the frequency Unity runs physics calculations.</p>
-						<p>Character Controller:</p>
-						<p>I was very satisfied with the FPS controller I ended up with. This was my first experience making a character controller of this complexity, so I learned a great deal about Unity’s input system. I also made use of Unity’s animation curve system to tune the jump behavior. Now the movement feels tight with light jumps that don’t feel floaty. </p>
-						<p>I also implemented gravity spheres that pull arrows that get within its range (the purple spheres in the video). I think this will allow for some fun combat mechanics in the future. </p>
-						<p>There is much I still want to implement in this game, however my focus is currently on another team game project that I plan to post on here soon.</p>
-						<p>The bow asset was created for the game by Kin Kwan. The other assets in the video are free placeholder art from the Unity asset store.</p>
+					      <h4>Sea Shader - HLSL Shader written for Unity</h4>		      
+					      <p>As the graphics programmer for my game development capstone team, I was in charge of implementing the various shaders and effects needed for our game. 
+							 In this video I show the sea shader I wrote in HLSL for Unity. This effect would likely have been easier to obtain with Unity's node-based Shader Graph, however I decided to write it in HLSL to further my experience in shader writing. 
+						  </p>
+							 <p>I am manipulating the vertices with a combination of sine functions, with adjustable properties (such as amplitude of the wave) accessible in the editor.
+							 I then scroll a diffuse texture across in the fragment shader. I also utilize a few noise textures to obtain the illusion of depth, and to generate moving highlights on the surface. 
+							 The next thing I do is calculate where to draw the "foam" effect (where the water collides with other surfaces). I do this by obtaining the normal information of the model it is in contact with in view space, and compare it against the relative distance from the camera using the depth buffer. This depth information is also used to calculate how large the segment of foam should be.
+							 Finally, I adjust the color of each fragment based on the height of the point in the wave, the color of the objects below the shader and their y-coordinates, and several properties adjustable from the editor.
+							</p>
+							
+						  <p>The rocks and sand have a cel shader applied to them that I implemented during a recent game jam I participated in.</p>
+						  <p>The rock models were created by a member of my game dev capstone team, and the textures were obtained online.</p>
+						
 						<div class="categories">Individual</div>
-						  <div class="categories">Development time: 4 weeks</div>			               
+						  <div class="categories">Development time: 1 week</div>			               
 					   </div>
 					   <div class="media">
-							<img src="images/portfolio/modals/m-BowShooter.PNG" alt="" />
+							<img src="images/portfolio/modals/m-seashader.PNG" alt="" />
 						</div>  
 
 			         <div class="link-box">
