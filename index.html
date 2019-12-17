@@ -430,7 +430,51 @@
 						  <h4>3D Platformer Game</h4>	
 						  <p>Frog and Croc is a retro-style 3D platformer based on the concept of controlling 2 characters with different abilities. The player must swap between playing as Frog and Croc as they navigate the environment and collect all of the golden clams. Solve navigational puzzles, fight enemies, and platform your way across the island!</p>	      
 						  <p>This is the result of a semester-long game project in my Game Development capstone course. I worked on a team of 4 individuals primarily implementing the AI, shader programming, and utility scripts. We utilized Agile development with Azure DevOps and GitHub, with biweekly sprint reviews/demos. There is more information on the game's website linked below, including download links for Windows and MacOS.</p>
-						  <p>*Note: Website content still under construction</p>
+						  <a href="https://ceolson.itch.io/frog-and-croc" target="_blank" title="Frog 'n' Croc Website" class="button button-primary">Frog 'n' Croc Website</a> 
+						  <h5>AI:</h5>
+						  <p>I implemented four types of enemy AI for this game. Because each enemy shares some basic properties and logic, I created 
+							an abstract enemy class for each enemy type to inherit from. As for the AI's decision logic, I implemented a finite state machine. This is done 
+							by utilizing a state machine class I wrote that takes any number of individual state classes from the game object it's attached to. This allows it to be utilized by any system in the game that utilizes different states and transitions (not just enemies). 
+						  </p>	
+						  <p>
+							Each individual state is defined in its own class, where the varying methods and tick logic for that state reside. These state classes derive from a base state, and are loaded into the state machine by the game object it's attached to. 
+							Implementing the enemies using individual state classes made adding new behavior to an enemy quick, and helped limit the scope of possible issues when debugging. 
+							It also allowed me to reuse some states across several enemies, such as the pursue player state. 
+						  </p>
+						  <h5>Shaders:</h5>
+						  <p>
+							This was the first game that I wrote my own shaders for in HLSL.  The three shaders I focussed on were the water, lava, and cel shaders. Due to the scope of the project and time restraints, I reused the logic from the water shader for the lava, with some slight alterations. 
+							
+						  </p>
+						  <p>
+							The water shader consists of a few features, such as scrolling textures for the main diffuse texture and surface ripples, varying color based on water depth, and an edge foam effect. For more details about this shader, please see my "Sea Shader" entry in my portfolio section of the website.
+							The lava shader utilized most of the same logic as the water shader, but with altered brightness values and movement speeds.
+						  </p>
+						  <p>
+							  The cel shader is based off of a fantastic tutorial on toon shading by <a href="https://roystan.net/articles/toon-shader.html">Roystan</a>. This was used on the player characters and the enemy models, as well as the trees and interactable objects in the environment. 
+						  </p>
+						  <h5>Utilitiy Scripts:</h5>
+						  <p>
+							  In addition to implementing the AI and shaders, I also wrote many utility scripts used across several parts of the game. After setting up the GitHub repo for the project, the first thing I implemented was an Xbox 360 Controller interface for use by the programmer writing the character controller. 
+							  In this interface, I check to see which operating system the game is running on and assign the appropriate button mapping (as controller driver mappings differ between Windows and MacOS). This was important to address at the start of our project, as our team was divided between PC and Mac users. 
+							  This also made it simple to remap our own control scheme when we decided to change it, because the character controller used calls such as "XboxController.B" instead of the lengthy strings in the input manager. 
+						  </p>
+						  <p>
+							  Other utilities I implemented were utility scripts deriving from MonoBehaviour with implementations of C#'s Invoke and Coroutine functions. These scripts are used by other scripts in the game that don't have access to MonoBehaviour, and thus can't utilize useful functions like delayed invokes and coroutines.
+							  I also implemented the event based system that is used when the player respawns and enemy logic and other items need to be reset. 
+						  </p>
+						  <h5>Closing Thoughts:</h5>
+						  <p>
+							This was the first game of this scale that I have been a part of, and I loved every moment of working on it. It is rare to get to work with a team that is passionate about the project they're working on, and that is one of the reasons I want to be in the game industry.
+							I am proud of what my team accomplished given the time period and our busy class schedules. Working on this game never felt like work, and I probably put my other projects off a little longer than I should have because of it. 
+							There are still bugs and miscellaneous things we want to change in the game, so there may be updates to it in the future. 
+
+						  </p>
+						  <p>
+							  I learned a lot about the game development process and working on a diverse team of developers through this project. I'm excited to continue making games in my free time, and I can't wait to get started in the industry.
+						  </p>
+						  <p>Please check out our game at the website below!</p>
+						  <p>*Note: Website may be under construction</p>
 						  <a href="https://ceolson.itch.io/frog-and-croc" target="_blank" title="Frog 'n' Croc Website" class="button button-primary">Frog 'n' Croc Website</a>
 						
 						<div class="categories">Group: 2 Programmers & 2 Artists</div>
