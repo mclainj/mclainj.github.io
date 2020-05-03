@@ -251,7 +251,6 @@
    			<h1>What I've been up to:</h1>
 
    			<p class="lead">I'll be posting many of the interesting projects I've completed here, as well as some of my ongoing work. There will be a mix of team projects and individual pursuits. Please check back soon for new entries!</p>
-			<p class="lead">Coming Soon: RTS/3rd Person Action hybrid game</p>
 			<p class="lead">Click on the images below to find out more about that project.</p>
    		</div>   		
    	</div> <!-- /section-intro--> 
@@ -288,6 +287,22 @@
 							</a>
 						</div>	               
 					</div> <!-- /folio-item -->
+
+				<div class="bgrid folio-item">
+					<div class="item-wrap">
+						<img src="images/portfolio/FrontlineGeneral.PNG" alt="Frog 'n' Croc">
+						<a href="#modal-3" class="overlay">	                  	           
+							<div class="folio-item-table">
+								<div class="folio-item-cell">
+											<h3 class="folio-title">Frontline General</h3>	     					    
+											<span class="folio-types">
+												RTS/3rd Person Action Game
+											</span>
+										</div>	                      	
+							</div>                    
+						</a>
+					</div>	               
+				</div> <!-- /folio-item -->	
 
 				<div class="bgrid folio-item">
 					<div class="item-wrap">
@@ -421,6 +436,58 @@
 
 	            <!-- modal popups - begin
 				============================================================= -->
+				<div id="modal-3" class="popup-modal slider mfp-hide">	
+    	
+					
+					<iframe width="853" height="480" src="https://www.youtube.com/embed/JnJT7Dkeyd8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<div class="description-box">  
+					<h4>Frontline General</h4>		      
+					  <p>Frontline General is a real-time strategy / 3rd person action hybrid game played against an AI opponent. 
+						  This game was the product of my computer science capstone course in Spring 2020. I worked as the lead on a team of four programmers over 10 weeks, with the majority of our work done online due to COVID. </p>
+					<h5>Game Design:</h5>
+					<p>The goal of the game is to destroy the opponent AI's base before they destroy yours. This is done by capturing Control Point Towers around the map, 
+						which grant the player a boost in income for each tower held. The player and enemy spend their income on buying additional units to overwhelm each other. 
+						The core mechanic we wanted to build our game around was the idea of switching from the Commander perspective of RTS gameplay, to a personal Unit perspective, 
+						providing a 3rd person controller for combat. The player and enemy have access to this switching ability, increasing the strength of the unit they possess, 
+						however they are unable to command other troops during this time. This makes the player have to balance the strategic gameplay of the RTS mode with the 
+						aggressive combat found in the 3rd person mode.
+					</p>
+					<h5>Implementation:</h5>
+					<p>Due to the scope of our project and time restraint, we started with a basic RTS engine asset, third person character controller, 
+						and animated models found on the Unity asset store. Neither the RTS engine asset nor the 3rd person controller offered the precise functionality we needed, 
+						so they were largely used as reference material to draw from for our implementation. 
+
+					</p>
+					<p>We split the team into two subteams: AI and Gameplay. I primarily worked on the Gameplay team integrating our 3rd person combat mode into the RTS framework. 
+						The AI team worked on training the opponent AI using a deep reinforcement learning algorithm, as well as created the state machines for individual 
+						unit behavior. After completing our individual components, we focused on integration. As the team lead, 
+						I spent much of my time working with the components that my teammates implemented and ensuring each part was compatible with the rest. 
+						Although there are still a few bugs, we found that our playtesters enjoyed the game overall. 
+					</p>
+					<p>
+						If you would like more details on the project, feel free to reach out to me or refer to our Game Design Document below:
+					</p>
+					<div class="row button-section">
+						<div class="col-twelve">
+							<a href="FrontlineGeneralGDD.pdf" target="_blank" title="Download GDD" class="button button-primary">Download GDD</a>
+						</div>   		
+					</div>
+					<div class="categories">Group: 4 programmers</div>
+					  <div class="categories">Development time: 10 weeks</div>			               
+				   </div>
+				   <!-- <div class="media">
+						<img src="images/portfolio/modals/m-BowShooter.PNG" alt="" />
+					</div>   -->
+
+				 <div class="link-box">
+					<!--<a href="http://www.behance.net">Details</a>-->
+					  <a href="#" class="popup-modal-dismiss">Close</a>
+				 </div>		      
+
+			   </div> <!-- /modal-3 -->
+
+
+
 				<div id="modal-2" class="popup-modal slider mfp-hide">	
     	
 						<div class="media">
